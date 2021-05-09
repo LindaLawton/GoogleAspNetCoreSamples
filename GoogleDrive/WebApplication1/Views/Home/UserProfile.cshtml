@@ -1,0 +1,15 @@
+﻿@model Google.Apis.PeopleService.v1.Data.Person
+
+@{
+    ViewData["Title"] = "Hello";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Use this page contains imformation about the authencated user..</p>
+
+@if (Model != null)
+{
+    <p>
+        <strong>UserName:</strong> <code>@Model.Names.FirstOrDefault()?.DisplayName</code>
+    </p>
+}

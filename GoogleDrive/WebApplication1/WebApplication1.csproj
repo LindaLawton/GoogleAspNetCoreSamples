@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Google.Apis.Auth.AspNetCore3" Version="1.51.0" />
+      <PackageReference Include="Google.Apis.Drive.v3" Version="1.51.0.2265" />
+      <PackageReference Include="Google.Apis.PeopleService.v1" Version="1.51.0.2273" />
+    </ItemGroup>
+
+
+</Project>

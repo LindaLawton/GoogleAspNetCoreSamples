@@ -1,0 +1,32 @@
+﻿@model DirectoryListModel
+
+@{
+    ViewData["Title"] = "Files on Google drive " + @Model.Files.Count();
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>This page contains a list of users files</p>
+
+@if (Model != null)
+{
+    <ol>
+    @foreach (var file in Model.Files)
+    {
+        @if (file.MimeType.Equals("application/vnd.google-apps.folder"))
+        {
+            <li>
+                
+
+                <a asp-controller="Drive"
+                   asp-action="ListFiles"
+                   asp-route-directoryname="@file.Name"
+                   asp-route-directoryid="@file.Id">@file.Name</a>
+            </li>
+        }
+        else
+        {
+            <li>@file.Name</li>    
+        }
+    }
+    </ol>
+}
